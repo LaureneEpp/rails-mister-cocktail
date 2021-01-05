@@ -1,8 +1,8 @@
-class DosesController < ApplicationControllers
-  # def new
-  #   @cocktail = Cocktail.find(params[:cocktail_id])
-  #   @dose = Dose.new
-  # end
+class DosesController < ApplicationController
+  def new
+    @cocktail = Cocktail.find(params[:cocktail_id])
+    @dose = Dose.new
+  end
 
   def create
     # we need `cocktail_id` to associate review with corresponding cocktail

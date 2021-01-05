@@ -12,7 +12,8 @@
         <div class="card">
            <div class="card-header">
             <%= cocktail.name %>
-            <%= image_tag "cocktail1.jpg", alt: "Cocktail", width: 200 %>
+            <%= cl_image_tag("https://res.cloudinary.com/dtpfc9kqr/image/upload/v1609873127/nikita-tikhomirov-7g00RqAiTRU-unsplash_txmkxf.jpg",
+                  width: 200, height: 300, crop: :fill) %>
           </div>
           <div class="card-footer">
             <%= link_to 'Want to know more?', cocktail_path(cocktail), class: "btn btn-primary" %>

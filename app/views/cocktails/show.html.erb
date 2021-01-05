@@ -13,6 +13,7 @@
   <div class="row">
     <div class="col-sm-12 col-md-6">
       <h3>Description</h3>
+      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
       <table class="table table-bordered">
         <tbody>
           <thead>
@@ -35,7 +36,7 @@
       </table>
     </div>
     <div class="col-sm-12 col-md-6">
-      <%= link_to "Add ingredients", cocktail_doses_path(@cocktail, @dose) %>
+      <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail, @dose) %>
     </div>
   </div>
 </div>
